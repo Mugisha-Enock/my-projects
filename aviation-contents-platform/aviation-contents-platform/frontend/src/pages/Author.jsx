@@ -1,0 +1,6 @@
+import {useMemo} from 'react';import {useParams} from 'react-router-dom';import {useFetch} from '../hooks/useFetch';import {api} from '../services/api/client';import Card from '../components/Card';import {Loading,Err} from '../components/Status';import {norm} from '../data/normalize';import {fd,ini} from '../utils';
+export default function Author(){const {username}=useParams(),p=useFetch(()=>api.getProfile(username),[username]),l=useFetch(()=>api.listStories({author:username,limit:30}),[username]),L=useMemo(()=>(l.data?.items||[]).map(norm),[l.data]);
+if(p.loading)return <Loading h={200}/>;if(p.error)return <Err m={p.error==='Author not found'?'This author does not exist.':p.error} retry={p.reload}/>;
+const a=p.data.user,n=p.data.storyCount;
+return <div className="w" style={{paddingTop:30}}><div className="box" style={{marginTop:0}}><span className="av" style={{width:72,height:72,fontSize:24}}>{ini(a.displayName)}</span><div><h2>{a.displayName}</h2><div className="mt">@{a.username} · Joined {fd(a.createdAt)} · {n} published {n===1?'story':'stories'}</div><p style={{color:'var(--tx2)',margin:'6px 0 0'}}>{a.bio}</p></div></div>
+<div className="grid g3" style={{marginBottom:50}}>{L.length?L.map(s=><Card key={s.id} s={s}/>):<p>No published stories yet.</p>}</div></div>}
