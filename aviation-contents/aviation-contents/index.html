@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aviation Contents</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#080A0F;--bg2:#0B1424;--card:#111824;--el:#182233;--tx:#F8FAFC;--tx2:#A7B0BF;--gold:#D9A441;--gold2:#F0CC79;--blue:#174EA6;--sky:#38BDF8;--bd:#263244;--ok:#22C55E;--err:#EF4444;--fd:'Space Grotesk',system-ui,sans-serif;--fb:'Inter',system-ui,sans-serif;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:400 16px/1.6 var(--fb)}
+a{color:inherit;text-decoration:none}h1,h2,h3{font-family:var(--fd);line-height:1.15;margin:0}
+button,input,select,textarea{font:inherit;color:inherit}
+.w{max-width:1200px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(8,10,15,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--bd)}
+.hd{display:flex;align-items:center;gap:20px;height:60px}
+.logo{font:700 18px var(--fd);display:flex;align-items:center;gap:8px}.logo svg{width:22px;fill:var(--gold)}.logo b{color:var(--gold)}
+nav{display:flex;gap:4px;margin-left:12px}nav a{padding:6px 12px;color:var(--tx2);border-bottom:2px solid transparent;font-size:14px}
+nav a.on{color:var(--gold);border-color:var(--gold)}
+.sp{flex:1}.sr{background:var(--card);border:1px solid var(--bd);border-radius:6px;padding:7px 12px;width:180px;font-size:14px}
+.btn{display:inline-block;border:1px solid var(--bd);background:var(--el);padding:9px 16px;border-radius:6px;cursor:pointer;font-weight:500;font-size:14px}
+.btn.g{background:var(--gold);color:#080A0F;border-color:var(--gold)}.btn.g:hover{background:var(--gold2)}.btn:hover{border-color:var(--sky)}
+.btn.d{color:var(--err)}
+.av{width:30px;height:30px;border-radius:50%;background:var(--blue);display:inline-grid;place-items:center;font:600 12px var(--fd);flex:none}
+.mb{display:none;background:none;border:1px solid var(--bd);border-radius:6px;padding:6px 10px;cursor:pointer}
+.hero{position:relative;padding:90px 0 70px;background:radial-gradient(ellipse at 70% 20%,#174EA655,transparent 60%),linear-gradient(180deg,#0B1424,#080A0F);overflow:hidden}
+.hero svg.pl{position:absolute;right:-40px;top:20px;width:min(520px,60%);fill:#38BDF812}
+.lb{color:var(--gold);font:600 12px var(--fd);letter-spacing:.2em;text-transform:uppercase}
+.hero h1{font-size:clamp(34px,6vw,64px);max-width:760px;margin:12px 0}.hero p{color:var(--tx2);max-width:560px;font-size:18px}
+.row{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.live{display:flex;align-items:center;gap:10px;padding:12px 0;font-size:14px;color:var(--tx2);border-bottom:1px solid var(--bd);flex-wrap:wrap}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 4px #22C55E22}
+.tag{font-size:11px;border:1px solid var(--bd);border-radius:4px;padding:1px 6px;color:var(--sky)}
+section{padding:44px 0}h2.t{font-size:28px;margin-bottom:20px}h2.t span{color:var(--gold)}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(4,1fr)}.g3{grid-template-columns:repeat(3,1fr)}
+.cd{background:var(--card);border:1px solid var(--bd);border-radius:8px;overflow:hidden;display:flex;flex-direction:column;transition:border-color .2s,transform .2s}
+.cd:hover{border-color:var(--gold);transform:translateY(-2px)}.cb{padding:16px;display:flex;flex-direction:column;gap:8px;flex:1}
+.cb h3{font-size:18px}.cb p{margin:0;color:var(--tx2);font-size:14px}.mt{font-size:12px;color:var(--tx2);display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.ci{display:flex;align-items:center;gap:6px;color:var(--gold);font:600 11px var(--fd);letter-spacing:.14em;text-transform:uppercase}
+.ci svg{width:16px;fill:none;stroke:var(--gold);stroke-width:1.8}
+.act{margin-top:auto;color:var(--sky);font-size:14px;font-weight:500}
+.cv{background:linear-gradient(135deg,hsl(var(--h) 60% 24%),#0B1424 72%);display:grid;place-items:center;position:relative}
+.cv svg{width:34%;max-width:110px;fill:hsl(var(--h) 80% 75% / .35)}
+.cv i{position:absolute;right:10px;bottom:10px;background:#000a;font:12px var(--fb);padding:2px 8px;border-radius:4px;font-style:normal}
+.cv u{position:absolute;width:46px;height:46px;border-radius:50%;background:#000a;border:2px solid var(--tx);text-decoration:none;display:grid;place-items:center}
+.ft{display:grid;grid-template-columns:1.4fr 1fr;gap:18px}.ft .cd.big .cv{height:300px!important}.lst{display:grid;gap:12px}
+.mini{display:grid;grid-template-columns:110px 1fr;gap:12px;background:var(--card);border:1px solid var(--bd);border-radius:8px;overflow:hidden}.mini h3{font-size:16px}.mini .cb{padding:10px 12px 10px 0}
+.mag{aspect-ratio:3/4;border-radius:4px;padding:16px;display:flex;flex-direction:column;justify-content:space-between;border:1px solid var(--bd);background:linear-gradient(160deg,hsl(var(--h) 55% 26%),#080A0F);cursor:pointer}
+.mag b{font:700 22px var(--fd);color:var(--gold2)}.mag small{color:var(--tx2)}
+.cta{background:linear-gradient(120deg,var(--blue),#0B1424);border:1px solid var(--bd);border-radius:10px;padding:44px 28px;text-align:center}
+.cta h2{font-size:30px}.cta p{max-width:560px;margin:12px auto;color:#d6dcea}
+footer{border-top:1px solid var(--bd);padding:30px 0;color:var(--tx2);font-size:14px}footer .row{margin:0 0 12px}
+.fl{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.chip{border:1px solid var(--bd);background:var(--card);border-radius:20px;padding:5px 14px;font-size:13px;cursor:pointer}.chip.on{border-color:var(--gold);color:var(--gold)}
+input.f,select.f,textarea.f{width:100%;background:var(--card);border:1px solid var(--bd);border-radius:6px;padding:10px 12px}
+input.f:focus,select.f:focus,textarea.f:focus,.sr:focus{outline:2px solid var(--sky);outline-offset:1px}
+label{display:block;font-size:13px;color:var(--tx2);margin:14px 0 5px}.er{color:var(--err);font-size:12px;min-height:0}
+.art{max-width:720px;margin:0 auto}.art h1{font-size:clamp(30px,5vw,46px);margin:10px 0}.art .bd p{font-size:18px;line-height:1.8;color:#dbe2ee}
+.bc{font-size:13px;color:var(--tx2);margin:20px 0 6px}.bc a{color:var(--sky)}
+.pill{display:inline-block;background:var(--gold);color:#080A0F;font:600 11px var(--fd);letter-spacing:.1em;padding:3px 9px;border-radius:3px;text-transform:uppercase}
+.box{background:var(--card);border:1px solid var(--bd);border-radius:8px;padding:18px;margin:26px 0;display:flex;gap:14px;align-items:center}
+.ed{display:grid;grid-template-columns:1fr 340px;gap:24px}
+.tabs{display:flex;gap:6px;margin-bottom:16px}.tr{display:grid;grid-template-columns:90px 1fr auto;gap:14px;align-items:center;background:var(--card);border:1px solid var(--bd);border-radius:8px;padding:10px;margin-bottom:10px}
+.st{font-size:11px;padding:2px 8px;border-radius:10px;border:1px solid}.st.p{color:var(--ok)}.st.dr{color:var(--gold)}
+#toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:50;display:grid;gap:8px;width:min(92vw,440px)}
+.ts{background:var(--el);border:1px solid var(--sky);border-radius:8px;padding:12px 16px;font-size:14px;display:flex;justify-content:space-between;gap:12px}
+.pv{background:var(--card);border:1px solid var(--bd);border-radius:8px;padding:16px}
+@media(max-width:1000px){.grid{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(2,1fr)}.ft,.ed{grid-template-columns:1fr}}
+@media(max-width:700px){.grid,.g3{grid-template-columns:1fr}.mb{display:block}.sr{display:none}
+nav{display:none;position:absolute;top:60px;left:0;right:0;flex-direction:column;background:var(--bg2);padding:10px 20px;border-bottom:1px solid var(--bd);margin:0}nav.open{display:flex}nav a{padding:12px 0}
+.tr{grid-template-columns:70px 1fr}.tr .row{grid-column:1/-1;margin:0}.hero{padding:60px 0 44px}.hd .btn.g{padding:8px 10px}}
+</style>
+</head>
+<body>
+<header><div class="w hd">
+<a class="logo" href="#/"><svg viewBox="0 0 64 64"><path d="M32 6l4 20 24 14v6L36 38l2 14 8 5v3l-14-3-14 3v-3l8-5 2-14L4 46v-6l24-14z"/></svg>Aviation <b>Contents</b></a>
+<nav id="nav" aria-label="Main"><a href="#/" data-r="home">Magazine</a><a href="#/explore" data-r="explore">Explore</a><a href="#/explore/photo" data-r="photo">Photos</a><a href="#/explore/video" data-r="video">Videos</a><a href="#/my-content" data-r="my-content">My Content</a></nav>
+<span class="sp"></span>
+<input class="sr" id="gs" type="search" placeholder="Search stories…" aria-label="Search">
+<a class="btn g" href="#/write">Write a Story</a>
+<a href="#/author/demopilot" class="av" title="Demo Pilot (demo sign-in)">DP</a>
+<button class="mb" id="mb" aria-label="Menu">Menu</button>
+</div></header>
+<main id="app"></main>
+<footer><div class="w"><div class="row"><a href="#/">About</a><a href="#/">Contact</a><a href="#/">Community Guidelines</a><a href="#/">Privacy Policy</a><a href="#/">Terms of Use</a></div>© 2026 Aviation Contents · Prototype running in demo mode: content lives in this browser tab only, not in a database.</div></footer>
+<div id="toast" role="status" aria-live="polite"></div>
+<script>
+const $=s=>document.querySelector(s),esc=t=>String(t).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+/* ---- demo auth (NOT secure: the real backend must supply the session and author ID) ---- */
+const ME={id:'u1',name:'Demo Pilot',user:'demopilot',bio:'Aviation enthusiast and weekend flight instructor.',joined:'2026-01-14'};
+const AU={u1:ME,u2:{id:'u2',name:'Elena Voss',user:'elenavoss',bio:'Airline captain and safety writer.',joined:'2025-09-02'},u3:{id:'u3',name:'Kofi Mensah',user:'kofim',bio:'Aerospace engineer covering propulsion.',joined:'2025-11-20'},u4:{id:'u4',name:'Inês Duarte',user:'inesd',bio:'Aviation photographer.',joined:'2025-07-08'}};
+const TY={news:'Aviation News',photo:'Photography',video:'Video',tech:'Technology & Innovation'};
+const IC={news:'<path d="M4 5h13v14H6a2 2 0 0 1-2-2zM17 9h3v8a2 2 0 0 1-2 2M7 9h7M7 13h7"/>',photo:'<path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/>',video:'<path d="M8 5l11 7-11 7z"/>',tech:'<circle cx="12" cy="12" r="8"/><path d="M12 12l5-5M12 4v2M4 12h2"/>'};
+const PL='<path d="M32 6l4 20 24 14v6L36 38l2 14 8 5v3l-14-3-14 3v-3l8-5 2-14L4 46v-6l24-14z"/>';
+const H=36e5,now=Date.now(),pad='This is sample demo copy. In production the body comes from the Express API as sanitized editor content, and the author is the server-recorded author ID.';
+const mk=(i,t,ty,cat,au,ago,rd,v,hue,ex,st='published')=>({id:'s'+i,slug:t.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,''),title:t,type:ty,cat,author:au,at:now-ago*H,upd:now-ago*H,read:rd,views:v,hue,excerpt:ex,body:ex+'\n\n'+pad+'\n\nLong-form stories support headings, quotes, lists, captions and credits in the full editor.',tags:[cat.toLowerCase(),ty],status:st,dur:ty==='video'?'12:40':null});
+let S=[mk(1,'The Quiet Revolution of Electric Regional Flight','tech','Innovation','u3',3,7,2140,200,'Battery-electric commuter aircraft are moving from demonstrators to certification campaigns across three continents.'),
+mk(2,'Night Approach: Eleven Frames Over the Alps','photo','Photography','u4',9,3,1580,28,'A photographer follows the evening arrival wave into Innsbruck, one long exposure at a time.'),
+mk(3,'Inside a Transatlantic Crossing: Cockpit Cam','video','Airlines','u2',22,13,4020,215,'Eight hours compressed into twelve minutes, with the crew explaining every decision.'),
+mk(4,'Runway Resurfacing Finishes Early at a Major Hub','news','Airports','u2',30,4,980,40,'Overnight crews wrapped up the project two weeks ahead of schedule, reopening the main runway.'),
+mk(5,'How Satellite Navigation Is Reshaping Approaches','tech','Navigation','u3',52,9,1760,190,'Satellite-based procedures are letting smaller airports offer precision approaches without ground beacons.'),
+mk(6,'Vintage Propliners at Sunrise','photo','Heritage','u4',70,2,2210,18,'Restored airliners from the 1950s line up on a misty apron for a once-a-year fly-in.'),
+mk(7,'Safety Briefing: What Turbulence Really Means','news','Safety','u1',96,6,890,210,'A flight instructor explains clear-air turbulence, forecasting, and why seatbelts matter.'),
+mk(8,'Draft: My First Solo Cross-Country','news','Training','u1',120,5,0,150,'Notes from a planned route, weather decisions, and a diversion.','draft')];
+const MAGS=[['Winter Edition','Issue 41',210],['Autumn Edition','Issue 40',28],['Summer Edition','Issue 39',150],['Spring Edition','Issue 38',280]];
+/* ---- real-time service: swap for socket.io-client later; same on/emit interface ---- */
+const rt=(()=>{const h={};return{on(e,f){(h[e]=h[e]||[]).push(f);return()=>h[e]=h[e].filter(x=>x!==f)},emit(e,d){(h[e]||[]).forEach(f=>f(d))}}})();
+rt.on('story:new',s=>{if(S.some(x=>x.id===s.id))return;S.unshift(s);toast('A new aviation story has been published.','#/article/'+s.slug,'Open');if(R().r==='home')view()});
+/* ---- helpers ---- */
+const fd=t=>new Date(t).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});
+const ft=t=>fd(t)+', '+new Date(t).toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'});
+const ini=n=>n.split(' ').map(x=>x[0]).join('').slice(0,2);
+const pub=()=>S.filter(s=>s.status==='published').sort((a,b)=>b.at-a.at);
+const cov=(s,h='180px')=>`<div class="cv" style="--h:${s.hue};height:${h}" role="img" aria-label="Cover for ${esc(s.title)}"><svg viewBox="0 0 64 64">${PL}</svg>${s.type==='video'?'<u><svg viewBox="0 0 24 24" style="width:20px;fill:#fff"><path d="M8 5l11 7-11 7z"/></svg></u>':''}${s.dur?`<i>${s.dur}</i>`:''}${s.type==='photo'?'<i>11 photos</i>':''}</div>`;
+const by=s=>`<a href="#/author/${AU[s.author].user}" class="mt"><span class="av" style="width:22px;height:22px;font-size:9px">${ini(AU[s.author].name)}</span>${esc(AU[s.author].name)}</a>`;
+function toast(m,href,label){const e=document.createElement('div');e.className='ts';e.innerHTML=`<span>${esc(m)}</span>${href?`<a href="${href}" style="color:var(--sky)">${label}</a>`:''}`;$('#toast').append(e);setTimeout(()=>e.remove(),5000)}
+const card=s=>`<article class="cd"><a href="#/article/${s.slug}">${cov(s)}</a><div class="cb"><span class="ci">${esc(s.cat)} · ${TY[s.type]}</span><h3><a href="#/article/${s.slug}">${esc(s.title)}</a></h3><p>${esc(s.excerpt)}</p><div class="mt">${by(s)}</div><div class="mt">${fd(s.at)} · ${s.read} min read · ${s.views.toLocaleString()} views</div><a class="act" href="#/article/${s.slug}">Read Story →</a></div></article>`;
+const R=()=>{const p=(location.hash.slice(2)||'').split('?')[0].split('/');return{r:p[0]||'home',a:p[1],p}};
+/* ---- views ---- */
+const V={};
+V.home=()=>{const P=pub(),lat=t=>P.find(s=>s.type===t),acts={news:'Read News',photo:'Explore Photos',video:'Watch Video',tech:'Explore Innovation'},lnk={news:'#/article/',photo:'#/explore/photo#',video:'#/explore/video#',tech:'#/article/'};
+const four=['news','photo','video','tech'].map(t=>{const s=lat(t);if(!s)return'';return`<article class="cd"><a href="#/article/${s.slug}">${cov(s,'200px')}</a><div class="cb"><span class="ci"><svg viewBox="0 0 24 24">${IC[t]}</svg>${TY[t]}</span><h3>${esc(s.title)}</h3><p>${esc(s.excerpt)}</p><div class="mt">${by(s)}·${fd(s.at)}</div><a class="act" href="#/article/${s.slug}">${acts[t]} →</a></div></article>`}).join('');
+const f=P[0],rest=P.slice(1,5);
+return`<section class="hero"><svg class="pl" viewBox="0 0 64 64">${PL}</svg><div class="w" style="position:relative"><span class="lb">The Aviation Edition</span><h1>Above the Ordinary. Beyond the Horizon.</h1><p>Discover aviation news, extraordinary aircraft, flight technology, and stories from the people shaping the world of aviation.</p><div class="row"><a class="btn g" href="#/explore">Explore Stories</a><a class="btn" href="#/write">Share Your Story</a></div></div></section>
+<div class="w"><div class="live"><span class="dot"></span><b style="color:var(--tx)">Live Aviation Stories</b><span class="tag">DEMO MODE</span><span>Recently published: ${ft(f.at)}</span><span class="sp"></span><button class="btn" id="sim">Simulate incoming story</button></div></div>
+<section><div class="w"><div class="grid">${four}</div></div></section>
+<section style="background:var(--bg2)"><div class="w"><h2 class="t">Latest from the <span>Aviation Community</span></h2><div class="ft"><article class="cd big"><a href="#/article/${f.slug}">${cov(f,'300px')}</a><div class="cb"><span class="ci">Featured · ${esc(f.cat)}</span><h3 style="font-size:26px"><a href="#/article/${f.slug}">${esc(f.title)}</a></h3><p>${esc(f.excerpt)}</p><div class="mt">${by(f)}${ft(f.at)} · ${f.read} min · ${f.views.toLocaleString()} views</div><a class="act" href="#/article/${f.slug}">Read Story →</a></div></article>
+<div class="lst">${rest.map(s=>`<a class="mini" href="#/article/${s.slug}">${cov(s,'100%')}<div class="cb"><span class="ci">${esc(s.cat)}</span><h3>${esc(s.title)}</h3><div class="mt">${esc(AU[s.author].name)} · ${fd(s.at)} · ${s.read} min</div></div></a>`).join('')}</div></div></div></section>
+<section><div class="w"><h2 class="t">Magazine <span>Editions</span></h2><div class="grid">${MAGS.map((m,i)=>`<div class="mag" style="--h:${m[2]}" data-mag="${i}" tabindex="0" role="button"><small>AVIATION CONTENTS</small><div><b>${m[0]}</b><br><small>${m[1]} · ${['Dec 2026','Sep 2026','Jun 2026','Mar 2026'][i]}</small></div></div>`).join('')}</div></div></section>
+<section><div class="w"><div class="cta"><h2>Your Aviation Story Deserves to Be Heard.</h2><p>Registered members can contribute aviation stories, photographs, videos, and technical insights.</p><a class="btn g" href="#/write">Start Writing</a></div></div></section>`};
+V.explore=()=>{const t=R().a||'';return`<div class="w" style="padding-top:30px"><h2 class="t">Explore <span>Stories</span></h2><input class="f" id="q" placeholder="Search by title or keyword…" value="${esc(window.gq||'')}" aria-label="Search stories"><div class="fl" style="margin-top:14px" id="chips">${['', 'news','photo','video','tech'].map(x=>`<button class="chip ${x===t?'on':''}" data-t="${x}">${x?TY[x]:'All'}</button>`).join('')}<select class="f" id="cat" style="width:auto;border-radius:20px"><option value="">All categories</option>${[...new Set(S.map(s=>s.cat))].map(c=>`<option>${c}</option>`).join('')}</select></div><div id="res"></div></div>`};
+let pg=1;
+function res(){const q=($('#q').value||'').toLowerCase(),t=$('#chips .on').dataset.t,c=$('#cat').value;
+const L=pub().filter(s=>(!t||s.type===t)&&(!c||s.cat===c)&&(!q||(s.title+s.excerpt+s.tags.join(' ')).toLowerCase().includes(q)));
+$('#res').innerHTML=L.length?`<div class="grid g3">${L.slice(0,pg*6).map(card).join('')}</div>${L.length>pg*6?'<p style="text-align:center;margin-top:20px"><button class="btn" id="more">Load more</button></p>':''}`:'<p style="padding:60px 0;text-align:center;color:var(--tx2)">No stories match your filters. Try a different keyword or category.</p>'}
+V.article=()=>{const s=S.find(x=>x.slug===R().a);if(!s)return nf();const a=AU[s.author],rel=pub().filter(x=>x.id!==s.id&&(x.cat===s.cat||x.type===s.type)).concat(pub()).filter((x,i,r)=>x.id!==s.id&&r.indexOf(x)===i).slice(0,3);
+return`<div class="w"><div class="art"><div class="bc"><a href="#/">Magazine</a> / <a href="#/explore/${s.type}">${TY[s.type]}</a> / ${esc(s.cat)}</div><span class="pill">${esc(s.cat)}</span><h1>${esc(s.title)}</h1><p style="color:var(--tx2);font-size:19px">${esc(s.excerpt)}</p>
+<div class="mt" style="margin:16px 0"><span class="av">${ini(a.name)}</span><a href="#/author/${a.user}" style="color:var(--tx)"><b>${esc(a.name)}</b></a> · ${ft(s.at)} · ${s.read} min read${s.status==='draft'?' · <span class="st dr">DRAFT PREVIEW</span>':''}</div>
+<div style="border-radius:8px;overflow:hidden;margin-bottom:24px">${cov(s,'360px')}</div><div class="bd">${s.body.split(/\n\n+/).map(p=>`<p>${esc(p)}</p>`).join('')}</div>
+<div class="fl" style="margin-top:20px">${s.tags.map(t=>`<span class="chip">#${esc(t)}</span>`).join('')}</div>
+<div class="row"><button class="btn" id="cp">Copy link</button><button class="btn" id="sh">Share</button><button class="btn" id="rp">Report content</button></div>
+<div class="box"><span class="av" style="width:52px;height:52px;font-size:18px">${ini(a.name)}</span><div><b><a href="#/author/${a.user}">${esc(a.name)}</a></b> <span class="mt">@${a.user}</span><div style="color:var(--tx2);font-size:14px">${esc(a.bio)}</div></div></div></div>
+<h2 class="t" style="margin-top:30px">Related <span>stories</span></h2><div class="grid g3" style="margin-bottom:50px">${rel.map(card).join('')}</div></div>`};
+V.author=()=>{const a=Object.values(AU).find(x=>x.user===R().a);if(!a)return nf();const L=pub().filter(s=>s.author===a.id);
+return`<div class="w" style="padding-top:30px"><div class="box" style="margin-top:0"><span class="av" style="width:72px;height:72px;font-size:24px">${ini(a.name)}</span><div><h2>${esc(a.name)}</h2><div class="mt">@${a.user} · Joined ${fd(a.joined)} · ${L.length} published ${L.length===1?'story':'stories'}</div><p style="color:var(--tx2);margin:6px 0 0">${esc(a.bio)}</p></div></div><div class="grid g3" style="margin-bottom:50px">${L.map(card).join('')||'<p>No published stories yet.</p>'}</div></div>`};
+let tab='all';
+V['my-content']=()=>{const L=S.filter(s=>s.author===ME.id&&(tab==='all'||s.status===tab));
+return`<div class="w" style="padding-top:30px"><h2 class="t">My <span>Content</span></h2><div class="tabs">${[['all','All My Content'],['published','Published'],['draft','Drafts']].map(([k,l])=>`<button class="chip ${tab===k?'on':''}" data-tab="${k}">${l}</button>`).join('')}</div>
+${L.map(s=>`<div class="tr">${cov(s,'60px')}<div><b>${esc(s.title)}</b><div class="mt"><span class="st ${s.status==='draft'?'dr':'p'}">${s.status}</span>${TY[s.type]} · Created ${fd(s.at)} · Updated ${fd(s.upd)}</div></div><div class="row" style="margin:0"><a class="btn" href="#/write/${s.id}">Edit</a><a class="btn" href="#/article/${s.slug}">Preview</a><button class="btn d" data-del="${s.id}">Delete</button></div></div>`).join('')||'<p style="color:var(--tx2);padding:40px 0">Nothing here yet. <a href="#/write" style="color:var(--sky)">Write your first story</a>.</p>'}</div>`};
+V.write=()=>{const e=S.find(x=>x.id===R().a&&x.author===ME.id)||{};return`<div class="w" style="padding-top:30px"><h2 class="t">Write a <span>Story</span></h2><div class="ed"><form id="wf" novalidate>
+<label for="ti">Title</label><input class="f" id="ti" value="${esc(e.title||'')}"><div class="er" id="e-ti"></div>
+<label for="sl">URL slug (auto-generated, editable)</label><input class="f" id="sl" value="${esc(e.slug||'')}">
+<label for="ex">Excerpt</label><textarea class="f" id="ex" rows="2">${esc(e.excerpt||'')}</textarea><div class="er" id="e-ex"></div>
+<label for="bo">Story body (blank line = new paragraph; HTML is shown as plain text)</label><textarea class="f" id="bo" rows="12">${esc(e.body||'')}</textarea><div class="er" id="e-bo"></div>
+<div class="mt" id="wc" style="margin-top:6px"></div></form>
+<aside><div class="pv"><b>Publishing</b>
+<label for="ty">Content type</label><select class="f" id="ty">${Object.entries(TY).map(([k,v])=>`<option value="${k}" ${e.type===k?'selected':''}>${v}</option>`).join('')}</select>
+<label for="ca">Category</label><input class="f" id="ca" value="${esc(e.cat||'')}"><div class="er" id="e-ca"></div>
+<label for="tg">Tags (comma separated)</label><input class="f" id="tg" value="${esc((e.tags||[]).join(', '))}">
+<label>Featured image</label><div style="border:1px dashed var(--bd);border-radius:6px;padding:16px;text-align:center;color:var(--tx2);font-size:13px">Upload component not included in this prototype. A generated cover is used.</div>
+<div class="row"><button class="btn g" id="pb">Publish Story</button><button class="btn" id="dr">Save Draft</button><a class="btn" href="#/my-content">Cancel</a></div>
+<div class="mt" style="margin-top:10px">Author: <b style="color:var(--tx)">${esc(ME.name)}</b> (taken from the signed-in account)</div></div>
+<div class="pv" style="margin-top:14px"><b>Live preview</b><h3 id="pt" style="margin:8px 0"></h3><div id="pp" style="color:var(--tx2);font-size:14px"></div></div></aside></div></div>`};
+function nf(){return'<div class="w" style="padding:80px 20px;text-align:center"><h2>Page not found</h2><p><a href="#/" style="color:var(--sky)">Back to the magazine</a></p></div>'}
+/* ---- render + events ---- */
+function view(){const r=R(),k=r.r==='photo'||r.r==='video'?'explore':r.r;const t=r.r==='photo'||r.r==='video'?r.r:r.a;
+location.hash.startsWith('#/photo')&&0;$('#app').innerHTML=(V[k]||nf)();window.scrollTo(0,0);
+document.querySelectorAll('nav a').forEach(a=>{const d=a.dataset.r;a.classList.toggle('on',d===r.r||(d==='explore'&&r.r==='explore'&&!r.a)||(d==='photo'&&r.a==='photo')||(d==='video'&&r.a==='video'))});
+$('#nav').classList.remove('open');pg=1;
+if(r.r==='explore'){res();$('#q').oninput=()=>{pg=1;res()};$('#cat').onchange=()=>{pg=1;res()};$('#chips').onclick=e=>{const b=e.target.closest('[data-t]');if(!b)return;$('#chips .on')?.classList.remove('on');b.classList.add('on');pg=1;res()};
+$('#res').onclick=e=>{if(e.target.id==='more'){pg++;res()}}}
+if(r.r==='write')bindW()}
+function bindW(){let man=!!$('#sl').value;const up=()=>{const b=$('#bo').value,w=b.trim()?b.trim().split(/\s+/).length:0;$('#wc').textContent=`${w} words · ${Math.max(1,Math.ceil(w/220))} min read`;$('#pt').textContent=$('#ti').value||'Untitled';$('#pp').innerHTML=b.split(/\n\n+/).filter(Boolean).map(p=>`<p>${esc(p)}</p>`).join('')};
+$('#ti').oninput=()=>{if(!man)$('#sl').value=$('#ti').value.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');up()};$('#sl').oninput=()=>man=true;$('#bo').oninput=up;up();
+const go=st=>{const v=i=>$('#'+i).value.trim(),E={};if(v('ti').length<8)E.ti='Title must be at least 8 characters.';if(v('ex').length<20)E.ex='Excerpt must be at least 20 characters.';if(v('bo').length<60)E.bo='Body must be at least 60 characters.';if(!v('ca'))E.ca='Choose a category.';
+['ti','ex','bo','ca'].forEach(k=>$('#e-'+k).textContent=E[k]||'');if(Object.keys(E).length)return toast('Please fix the highlighted fields.');
+const w=v('bo').split(/\s+/).length,id=R().a,ex=S.find(x=>x.id===id&&x.author===ME.id);
+const s={...(ex||{}),id:ex?ex.id:'s'+Date.now(),slug:v('sl')||'story-'+Date.now(),title:v('ti'),excerpt:v('ex'),body:v('bo'),type:$('#ty').value,cat:v('ca'),tags:v('tg').split(',').map(x=>x.trim()).filter(Boolean),author:ME.id,status:st,read:Math.max(1,Math.ceil(w/220)),upd:Date.now(),at:ex?ex.at:Date.now(),views:ex?ex.views:0,hue:ex?ex.hue:Math.floor(Math.random()*360)};
+if(ex)Object.assign(ex,s);else if(st==='published')rt.emit('story:new',s);else S.unshift(s);
+toast(st==='published'?'Demo publish: stored in this tab only, not in MongoDB.':'Draft saved locally (demo).');location.hash=st==='published'?'#/article/'+s.slug:'#/my-content'};
+$('#pb').onclick=()=>go('published');$('#dr').onclick=()=>go('draft')}
+document.addEventListener('click',e=>{const t=e.target;
+if(t.id==='sim'){rt.emit('story:new',mk(Date.now(),'Simulated: Breaking Hangar Fire Drill Goes Live','news','Safety','u2',0,3,0,Math.floor(Math.random()*360),'This story was generated by the demo simulator, not by a real user or server.'));toast('SIMULATION: no real server event occurred.')}
+if(t.dataset.mag)toast('Edition viewer is not part of this prototype.');
+if(t.dataset.tab){tab=t.dataset.tab;view()}
+if(t.dataset.del&&confirm('Delete this story? This cannot be undone.')){S=S.filter(s=>s.id!==t.dataset.del);view()}
+if(t.id==='cp')navigator.clipboard?.writeText(location.href).then(()=>toast('Link copied.'),()=>toast('Copy failed. Copy it from the address bar.'));
+if(t.id==='sh')navigator.share?navigator.share({url:location.href}).catch(()=>{}):toast('Sharing is not supported here. Use Copy link.');
+if(t.id==='rp')toast('Report received (demo). A moderator would review it.');
+if(t.id==='mb')$('#nav').classList.toggle('open')});
+document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.dataset.mag)toast('Edition viewer is not part of this prototype.')});
+$('#gs').onkeydown=e=>{if(e.key==='Enter'){window.gq=e.target.value;location.hash='#/explore'}};
+addEventListener('hashchange',view);view();
+</script>
+</body>
+</html>
